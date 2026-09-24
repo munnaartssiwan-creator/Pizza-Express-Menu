@@ -1,38 +1,117 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
 <title>Pizza Express | Siwan</title>
-<meta name="description" content="Pizza Express Siwan - Pizza, shakes, mocktails, burgers, sandwiches and combos. Home delivery available.">
+<meta name="description" content="Pizza Express Siwan menu — pizzas, chicken pizzas, burgers, shakes, mocktails, sandwiches, sides and combos. Home delivery available.">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff8f4;color:#111}.top{background:#080808;color:#fff;text-align:center;padding:10px;font-weight:800;font-size:14px}.hero{background:linear-gradient(135deg,#080808,#1b1b1b 60%,#650000);color:#fff;padding:35px 18px 55px}.wrap{max-width:1150px;margin:auto}.brand{font-size:42px;font-weight:900;letter-spacing:-2px}.brand span{color:#f20b12}.tag{color:#ff3333;font-weight:900;letter-spacing:2px;margin-top:35px}.hero h1{font-size:clamp(46px,8vw,82px);line-height:.9;margin:10px 0}.hero h1 span{color:#f20b12}.hero p{font-size:19px;color:#ddd;max-width:620px;line-height:1.5}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{padding:14px 22px;border-radius:30px;text-decoration:none;font-weight:900}.red{background:#e50909;color:#fff}.white{background:#fff;color:#111}.section{padding:55px 18px}.section h2{text-align:center;font-size:38px;margin:0 0 12px}.sub{text-align:center;color:#666;margin:0 auto 30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 7px 25px #00000012;border:1px solid #eee}.card h3{margin:0 0 15px;color:#e50909;font-size:23px}.item{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed #ddd}.item:last-child{border:0}.price{font-weight:900;white-space:nowrap}.combo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.combo{background:#fff1f1;border:2px solid #ed2222;border-radius:18px;padding:20px}.combo h3{margin:0;color:#a80000}.combo .price{font-size:27px;color:#a80000;margin-top:12px}.chips{text-align:center;margin:25px 0}.chip{display:inline-block;background:#111;color:#fff;border-radius:20px;padding:9px 14px;margin:4px;font-weight:800}.cta{background:#090909;color:#fff;text-align:center;padding:55px 18px}.cta h2{font-size:40px}.contact{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.contact a{color:#fff;text-decoration:none;background:#e50909;padding:14px 22px;border-radius:28px;font-weight:900}.contact .wa{background:#159447}.footer{text-align:center;background:#000;color:#aaa;padding:22px}.small{font-size:13px;color:#777}
-@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.combo-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.grid,.combo-grid{grid-template-columns:1fr}.brand{font-size:34px}.section{padding:40px 14px}}
-</style></head>
+:root{--red:#ed1117;--red2:#ff3a3f;--black:#090909;--cream:#fff8f2;--muted:#6d6d6d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--cream);color:#151515}
+a{text-decoration:none;color:inherit}.topbar{background:#050505;color:#fff;text-align:center;padding:9px 14px;font-size:13px;font-weight:800;letter-spacing:.2px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(9,9,9,.96);backdrop-filter:blur(10px);border-bottom:1px solid #252525}
+.navin{max-width:1180px;margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:8px;min-width:180px}.logo svg{width:155px;height:auto;display:block}
+.navlinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.navlinks a{color:#fff;font-size:13px;font-weight:800;padding:9px 11px;border-radius:20px}.navlinks a:hover{background:#222}
+.hero{position:relative;overflow:hidden;background:#080808;color:#fff;min-height:610px;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.78) 42%,rgba(0,0,0,.22) 100%),url("https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1800&q=88") center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(transparent,var(--cream))}
+.heroin{position:relative;z-index:2;max-width:1180px;width:100%;margin:auto;padding:75px 18px 100px}
+.hero-logo{width:min(430px,78vw);margin-bottom:22px}
+.eyebrow{display:inline-flex;background:var(--red);padding:8px 14px;border-radius:22px;font-size:12px;font-weight:900;letter-spacing:1.5px}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:.95;margin:17px 0 15px;letter-spacing:-3px}.hero h1 span{color:var(--red2)}
+.hero p{font-size:18px;line-height:1.55;color:#e8e8e8;max-width:600px;margin:0}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px}.btn{padding:14px 20px;border-radius:28px;font-weight:900;font-size:14px}.btn.red{background:var(--red);color:#fff}.btn.light{background:#fff;color:#111}.btn.green{background:#19a35b;color:#fff}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.badge{border:1px solid #555;border-radius:18px;padding:8px 12px;font-size:12px;font-weight:800;color:#ddd}
+.section{padding:68px 18px}.wrap{max-width:1180px;margin:auto}.heading{text-align:center;margin-bottom:30px}.heading h2{font-size:clamp(31px,5vw,46px);margin:0 0 8px;letter-spacing:-1.5px}.heading p{color:var(--muted);margin:0}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 12px 35px #00000010;border:1px solid #eee}.feature img{width:100%;height:210px;object-fit:cover;display:block}.feature-body{padding:18px}.feature-body h3{margin:0 0 6px;font-size:21px}.feature-body p{margin:0;color:#707070;line-height:1.5;font-size:14px}
+.menu-nav{display:flex;gap:8px;overflow:auto;padding:4px 0 20px;scrollbar-width:none}.menu-nav::-webkit-scrollbar{display:none}.menu-nav a{white-space:nowrap;background:#111;color:#fff;padding:10px 15px;border-radius:24px;font-size:12px;font-weight:900}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #ececec;border-radius:20px;padding:21px;box-shadow:0 8px 25px #00000009}.card h3{margin:0 0 15px;color:#c90006;font-size:22px}.item{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px dashed #ddd;font-size:14px;line-height:1.3}.item:last-child{border-bottom:0}.price{font-weight:900;white-space:nowrap;color:#111}.size-note{font-size:11px;color:#777;margin:-8px 0 8px}.description{font-size:13px;color:#777;line-height:1.5;margin:0 0 12px}
+.chicken{border:2px solid #e51a20;background:linear-gradient(180deg,#fff,#fff7f7)}.chicken h3{display:flex;align-items:center;justify-content:space-between}.hot{font-size:10px;background:#111;color:#fff;border-radius:12px;padding:5px 8px;letter-spacing:.7px}
+.combos{background:#111;color:#fff}.combos .heading p{color:#bbb}.combo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.combo{background:linear-gradient(145deg,#1d1d1d,#0b0b0b);border:1px solid #393939;border-radius:20px;padding:22px;position:relative;overflow:hidden}.combo:after{content:"";position:absolute;width:90px;height:90px;background:var(--red);filter:blur(50px);opacity:.28;right:-25px;top:-25px}.combo h3{margin:0;color:#fff;font-size:19px}.combo p{color:#bbb;line-height:1.55;font-size:13px;min-height:62px}.combo .price{color:#ff4045;font-size:28px}
+.gallery{display:grid;grid-template-columns:1.35fr .65fr .65fr;gap:15px}.gallery img{width:100%;height:260px;object-fit:cover;border-radius:20px;display:block}.gallery img:first-child{height:535px;grid-row:span 2}
+.info{background:#fff;border-top:1px solid #eee}.contactbox{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.contactbox h2{font-size:38px;margin:0 0 10px}.contactbox p{color:#666;line-height:1.6}.address{background:#111;color:#fff;border-radius:22px;padding:28px}.address strong{display:block;font-size:20px;margin-bottom:8px}.address p{color:#ccc;margin:6px 0}
+.footer{background:#050505;color:#999;text-align:center;padding:24px 18px;font-size:12px}.footer b{color:#fff}
+.float{position:fixed;right:18px;bottom:18px;z-index:60;background:#19a35b;color:#fff;padding:13px 17px;border-radius:30px;font-weight:900;font-size:13px;box-shadow:0 8px 25px #0003}
+@media(max-width:900px){.feature-grid,.grid{grid-template-columns:1fr 1fr}.combo-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{height:320px;grid-row:span 1}.contactbox{grid-template-columns:1fr}.navlinks{display:none}}
+@media(max-width:560px){.navin{padding:9px 12px}.logo svg{width:135px}.hero{min-height:590px}.heroin{padding:55px 15px 95px}.hero h1{letter-spacing:-2px}.hero p{font-size:16px}.section{padding:50px 14px}.feature-grid,.grid,.combo-grid,.gallery{grid-template-columns:1fr}.gallery img,.gallery img:first-child{height:230px}.topbar{font-size:11px}.float{right:12px;bottom:12px}.contactbox h2{font-size:31px}}
+</style>
+</head>
 <body>
-<div class="top">HOME DELIVERY • CALL NOW: 9798655612 • Mouleshwari Chowk, Siwan (Bihar) 841226</div>
-<header class="hero"><div class="wrap"><div class="brand">Pizza <span>express</span></div>
-<div class="tag">PIZZA • SHAKES • MOCKTAILS • BURGER • & MORE</div><h1>Good Food.<br><span>Good Mood.</span></h1>
-<p>Fresh pizzas, burgers, shakes, mocktails and more. Order for home delivery in Siwan.</p>
-<div class="buttons"><a class="btn red" href="tel:9798655612">📞 Call Now</a><a class="btn white" href="#menu">View Menu</a></div></div></header>
+<div class="topbar">HOME DELIVERY • 9798655612 • MOULESWHARI CHOWK, SIWAN (BIHAR) 841226</div>
 
-<section class="section" id="menu"><div class="wrap"><h2>Our Menu</h2><p class="sub">Pizza Express menu and prices</p><div class="chips"><span class="chip">Pizza</span><span class="chip">Shakes</span><span class="chip">Mocktails</span><span class="chip">Burger</span><span class="chip">Sandwich</span><span class="chip">Garlic Bread</span></div>
-<div class="grid">
+<nav class="nav"><div class="navin">
+<a class="logo" href="#"><svg viewBox="0 0 440 145" role="img" aria-label="Pizza Express"><text x="8" y="62" fill="#fff" font-family="Georgia,serif" font-size="67" font-weight="900">Pizza</text><text x="4" y="128" fill="#f21a20" font-family="Georgia,serif" font-size="78" font-weight="900" font-style="italic">express</text></svg></a>
+<div class="navlinks"><a href="#menu">Menu</a><a href="#combos">Combos</a><a href="#gallery">Photos</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header class="hero"><div class="heroin">
+<div class="eyebrow">PIZZA • SHAKES • MOCKTAILS • BURGER & MORE</div>
+<h1>Good Food.<br><span>Good Mood.</span></h1>
+<p>Fresh pizzas, chicken pizzas, burgers, shakes, mocktails and more — made for sharing and available for home delivery in Siwan.</p>
+<div class="actions"><a class="btn red" href="tel:9798655612">📞 Call Now</a><a class="btn light" href="#menu">🍕 View Menu</a><a class="btn green" href="https://wa.me/919798655612?text=Hello%20Pizza%20Express%2C%20I%20want%20to%20order.">WhatsApp Order</a></div>
+<div class="badges"><span class="badge">Home Delivery</span><span class="badge">Veg & Non-Veg Pizza</span><span class="badge">Siwan</span></div>
+</div></header>
+
+<section class="section"><div class="wrap">
+<div class="heading"><h2>Made to Make You Hungry</h2><p>Pizza Express favourites at a glance</p></div>
+<div class="feature-grid">
+<article class="feature"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1000&q=85" alt="Pizza"><div class="feature-body"><h3>Fresh Pizza</h3><p>From classic cheese favourites to loaded veggie and paneer pizzas.</p></div></article>
+<article class="feature"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85" alt="Burger"><div class="feature-body"><h3>Loaded Burgers</h3><p>Crispy, peri peri, tandoori paneer and chicken burger options.</p></div></article>
+<article class="feature"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=1000&q=85" alt="Milkshake"><div class="feature-body"><h3>Thick Shakes</h3><p>Kitkat, strawberry, mango, chocolate and cold coffee.</p></div></article>
+</div></div></section>
+
+<section class="section" id="menu"><div class="wrap">
+<div class="heading"><h2>Our Menu</h2><p>Regular / Medium / Large prices are shown in order where applicable.</p></div>
+<div class="menu-nav"><a href="#veg">Veg Pizza</a><a href="#chicken">Chicken Pizza</a><a href="#other">Drinks & Sides</a><a href="#burger">Burgers</a></div>
+<div class="grid" id="veg">
 <div class="card"><h3>Basic Concepts</h3><div class="item"><b>Cheese Onion</b><span class="price">₹99 / 149 / 249</span></div><div class="item"><b>Tandoori Cheese Corn</b><span class="price">₹99 / 149 / 249</span></div><div class="item"><b>Golden Delight</b><span class="price">₹99 / 149 / 249</span></div><div class="item"><b>Veggie Fresh</b><span class="price">₹99 / 149 / 249</span></div></div>
 <div class="card"><h3>Supreme Delight</h3><div class="item"><b>Italian Pizza</b><span class="price">₹149 / 199 / 299</span></div><div class="item"><b>Veg Deluxe</b><span class="price">₹149 / 199 / 299</span></div><div class="item"><b>Pizza Express Exotica</b><span class="price">₹149 / 199 / 299</span></div></div>
 <div class="card"><h3>Fresh Beginnings</h3><div class="item"><b>Mexican Delight</b><span class="price">₹189 / 299 / 379</span></div><div class="item"><b>Mexican Salsa</b><span class="price">₹189 / 299 / 379</span></div><div class="item"><b>Special Country Feast</b><span class="price">₹189 / 299 / 379</span></div><div class="item"><b>Tandoori Paneer</b><span class="price">₹189 / 299 / 379</span></div><div class="item"><b>Achari Treat</b><span class="price">₹189 / 299 / 379</span></div><div class="item"><b>Fresh Farmers Choice</b><span class="price">₹189 / 299 / 379</span></div></div>
 <div class="card"><h3>Signature Crust</h3><div class="item"><b>Over Loaded Veggie</b><span class="price">₹199 / 349 / 429</span></div><div class="item"><b>Paneer Overloaded</b><span class="price">₹199 / 349 / 429</span></div><div class="item"><b>Makhni Pizza</b><span class="price">₹199 / 349 / 429</span></div><div class="item"><b>Veg. Heaven Pizza</b><span class="price">₹199 / 349 / 429</span></div></div>
-<div class="card"><h3>Non Veg Pizza</h3><div class="item"><b>Chicken Tikka Pizza</b></div><div class="item"><b>Barbecue Chicken Pizza</b></div><div class="item"><b>Chicken Cheese Pizza</b></div><div class="item"><b>Loaded Chicken Pizza</b></div><div class="item"><b>Chicken Achari Pizza</b></div><div class="item"><b>Crunchy Chicken Pizza</b></div><div class="item"><b>Customize Chicken Pizza</b></div><div class="item"><b>Chicken Chilli Pizza</b></div></div>
-<div class="card"><h3>Queen Margherita</h3><p>Dive into pure love of Mozzarella Cheese with bits of basil.</p><div class="item"><b>Regular / Medium / Large</b><span class="price">₹139 / 199 / 249</span></div></div>
+<div class="card"><h3>Queen Margherita</h3><p class="description">Dive into pure love of Mozzarella Cheese with bits of basil.</p><div class="item"><b>Regular / Medium / Large</b><span class="price">₹139 / 199 / 249</span></div></div>
+</div>
+
+<div class="grid" id="chicken" style="margin-top:18px">
+<div class="card chicken"><h3>Chicken Pizza <span class="hot">NON-VEG</span></h3><p class="size-note">Regular / Medium / Large</p><div class="item"><b>Chicken Tikka Pizza</b><span class="price">₹179 / 289 / 349</span></div><div class="item"><b>Barbecue Chicken Pizza</b><span class="price">₹179 / 289 / 349</span></div><div class="item"><b>Chicken Cheese Pizza</b><span class="price">₹179 / 289 / 349</span></div><div class="item"><b>Loaded Chicken Pizza</b><span class="price">₹179 / 289 / 349</span></div><div class="item"><b>Chicken Achari Pizza</b><span class="price">₹179 / 289 / 349</span></div><div class="item"><b>Crunchy Chicken Pizza</b><span class="price">₹179 / 289 / 349</span></div><div class="item"><b>Customize Chicken Pizza</b><span class="price">₹179 / 289 / 349</span></div><div class="item"><b>Chicken Chilli Pizza</b><span class="price">₹179 / 289 / 349</span></div></div>
+<div class="card" style="padding:0;overflow:hidden"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c8c8d6?auto=format&fit=crop&w=1100&q=85" alt="Chicken style pizza" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block"></div>
+<div class="card" style="display:flex;align-items:center;justify-content:center;background:#111;color:#fff;min-height:380px"><div><div style="font-size:12px;letter-spacing:2px;color:#ff3b40;font-weight:900">NON-VEG FAVOURITES</div><h3 style="color:#fff;font-size:31px;margin:10px 0">Chicken Pizza</h3><p style="color:#bbb;line-height:1.6">Tikka • BBQ • Cheese • Loaded • Achari • Crunchy • Chilli</p><a class="btn red" href="tel:9798655612">Order Now</a></div></div>
+</div>
+
+<div class="grid" id="other" style="margin-top:18px">
 <div class="card"><h3>Shakes • ₹129</h3><div class="item"><b>Kitkat Shake</b></div><div class="item"><b>Strawberry Shake</b></div><div class="item"><b>Mango Shake</b></div><div class="item"><b>Chocolate Shake</b></div><div class="item"><b>Cold Coffee</b></div></div>
 <div class="card"><h3>Mocktails • ₹109</h3><div class="item"><b>Mint Mojito</b></div><div class="item"><b>Spicy Mango Mojito</b></div><div class="item"><b>Watermelon Mojito</b></div><h3 style="margin-top:20px">Slides • ₹99</h3><div class="item"><b>Garlic Bread</b></div><div class="item"><b>Stuffed Garlic Bread</b></div><div class="item"><b>Zingy Parcel</b></div><div class="item"><b>Non Veg Parcel</b></div></div>
-<div class="card"><h3>Sandwich • ₹109</h3><div class="item"><b>Veg Grilled Sandwich</b></div><div class="item"><b>Golden Corn Paneer</b></div><div class="item"><b>Peri Peri Grilled Paneer</b></div><div class="item"><b>Exotic Grilled</b></div><h3 style="margin-top:20px">Burger</h3><div class="item"><b>Crispy Tikki Burger</b><span class="price">₹49</span></div><div class="item"><b>Peri Peri Burger</b><span class="price">₹69</span></div><div class="item"><b>Tandoori Paneer Burger</b><span class="price">₹69</span></div><div class="item"><b>Double Decker Veggie</b><span class="price">₹69</span></div><div class="item"><b>Corn Cheese Burger</b><span class="price">₹89</span></div><div class="item"><b>Strip Chicken Burger</b><span class="price">₹89</span></div><div class="item"><b>Spicy Chicken Burger</b><span class="price">₹89</span></div><div class="item"><b>Chicken Tikka Burger</b><span class="price">₹89</span></div><div class="item"><b>Crunchy Chicken Patty</b><span class="price">₹99</span></div></div>
-</div></div></section>
+<div class="card"><h3>Sandwich • ₹109</h3><div class="item"><b>Veg Grilled Sandwich</b></div><div class="item"><b>Golden Corn Paneer</b></div><div class="item"><b>Peri Peri Grilled Paneer</b></div><div class="item"><b>Exotic Grilled</b></div></div>
+</div>
 
-<section class="section" id="combos"><div class="wrap"><h2>Combos</h2><p class="sub">Special combo offers</p><div class="combo-grid">
+<div class="card" id="burger" style="margin-top:18px"><h3>Burgers</h3><div class="grid" style="grid-template-columns:repeat(3,1fr);gap:0 22px"><div class="item"><b>Crispy Tikki Burger</b><span class="price">₹49</span></div><div class="item"><b>Peri Peri Burger</b><span class="price">₹69</span></div><div class="item"><b>Tandoori Paneer Burger</b><span class="price">₹69</span></div><div class="item"><b>Double Decker Veggie</b><span class="price">₹69</span></div><div class="item"><b>Corn Cheese Burger</b><span class="price">₹89</span></div><div class="item"><b>Strip Chicken Burger</b><span class="price">₹89</span></div><div class="item"><b>Spicy Chicken Burger</b><span class="price">₹89</span></div><div class="item"><b>Chicken Tikka Burger</b><span class="price">₹89</span></div><div class="item"><b>Crunchy Chicken Patty</b><span class="price">₹99</span></div></div></div>
+</div></section>
+
+<section class="section combos" id="combos"><div class="wrap">
+<div class="heading"><h2>Combo Offers</h2><p>Perfect for students, couples, friends and families</p></div>
+<div class="combo-grid">
 <div class="combo"><h3>Student Combo</h3><p>Regular Margherita<br>Pepsi (250ml)</p><div class="price">₹99</div></div>
 <div class="combo"><h3>Couple Combo</h3><p>Medium Pizza<br>Cheese Garlic Bread<br>Cold Drinks</p><div class="price">₹199</div></div>
 <div class="combo"><h3>Friends Combo</h3><p>1 Large Pizza<br>Garlic Bread + Fries<br>Cold Drinks</p><div class="price">₹349</div></div>
 <div class="combo"><h3>Family Combo</h3><p>2 Medium Pizza<br>Garlic Bread + Fries<br>1.25 L Cold Drinks</p><div class="price">₹599</div></div>
 </div></div></section>
 
-<section class="cta" id="contact"><div class="wrap"><h2>Order From Pizza Express</h2><p>Home Delivery Available</p><p>Mouleshwari Chowk, Siwan (Bihar) 841226</p><div class="contact"><a href="tel:9798655612">📞 9798655612</a><a class="wa" href="https://wa.me/919798655612?text=Hello%20Pizza%20Express%2C%20I%20want%20to%20order.">WhatsApp Order</a></div><p class="small">Pizza • Shakes • Mocktails • Burger & More</p></div></section>
-<footer class="footer">© Pizza Express • Siwan, Bihar</footer>
-</body></html>
+<section class="section" id="gallery"><div class="wrap">
+<div class="heading"><h2>Pizza Express Gallery</h2><p>A visual taste of what we serve</p></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1200&q=88" alt="Fresh pizza">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=88" alt="Burger">
+<img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=88" alt="Milkshake">
+<img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=88" alt="Fries">
+<img src="https://images.unsplash.com/photo-1593560708920-61dd98c8c8d6?auto=format&fit=crop&w=900&q=88" alt="Pizza">
+</div></div></section>
+
+<section class="section info" id="contact"><div class="wrap contactbox">
+<div><h2>Order From Pizza Express</h2><p>Home delivery available. Call us or send your order on WhatsApp.</p><div class="actions"><a class="btn red" href="tel:9798655612">📞 9798655612</a><a class="btn green" href="https://wa.me/919798655612?text=Hello%20Pizza%20Express%2C%20I%20want%20to%20order.">WhatsApp Order</a></div></div>
+<div class="address"><strong>📍 Visit Us</strong><p>Mouleshwari Chowk</p><p>Siwan, Bihar 841226</p><p style="color:#ff4549;font-weight:900">Home Delivery Available</p></div>
+</div></section>
+
+<footer class="footer">© <b>Pizza Express</b> • Siwan, Bihar • Menu website</footer>
+<a class="float" href="tel:9798655612">📞 Order Now</a>
+</body>
+</html>
